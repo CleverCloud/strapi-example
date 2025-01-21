@@ -74,6 +74,8 @@ This project uses [@strapi/provider-upload-aws-s3](https://www.npmjs.com/package
 
 Don't forget to connect your add-ons to the application (**Service dependencies** option from your app menu in Clever Cloud Console).
 
+Cellar bucket need to be public. Follow this [documentation](https://www.clever-cloud.com/developers/doc/addons/cellar/#public-bucket-policy).
+
 #### Dedicated build instance
 
 Strapi can run on a small instance like the `XS` plan, but the build process can take more RAM and CPU. Enable a dedicated build instance from your app menu **Information** option in Clever Cloud Console.
