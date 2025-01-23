@@ -64,6 +64,10 @@ TRANSFER_TOKEN_SALT="<your-token>"
 
 Run `openssl rand -hex 32` for each value and replace `<your-token>` with the result.
 
+#### Custom domain
+
+If you use custom domain, change `origin:` on `middlewares.js`
+
 #### A PostgreSQL add-on
 
 Environment variables have already been set in the code.
@@ -73,6 +77,8 @@ Environment variables have already been set in the code.
 This project uses [@strapi/provider-upload-aws-s3](https://www.npmjs.com/package/@strapi/provider-upload-aws-s3) to store assets and has already been set up.
 
 Don't forget to connect your add-ons to the application (**Service dependencies** option from your app menu in Clever Cloud Console).
+
+Cellar policies need to be public. Follow this [documentation](https://www.clever-cloud.com/developers/doc/addons/cellar/#public-bucket-policy).
 
 #### Dedicated build instance
 
