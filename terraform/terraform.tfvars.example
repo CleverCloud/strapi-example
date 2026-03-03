@@ -1,0 +1,72 @@
+# ===========================
+# ORGANISATION CONFIGURATION
+# ===========================
+organisation_id = "orga_xxxx..."  # or "user_xxxx..." for Personal Space
+# Use "Clever login" to generate a token and secret
+clevercloud_token = "<YOUR_TOKEN>"
+clevercloud_secret = "<YOUR_TOKEN>"
+
+# ===========================
+# APPLICATION CONFIGURATION
+# ===========================
+app_name            = "my-strapi"
+region              = "par"  # Options: par (Paris), mtl (Montreal), rbx (Roubaix), sgp (Singapore), syd (Sydney), wsw (Warsaw)
+instance_type       = "XS"   # Options: XS, S, M, L, XL, XXL
+build_instance_type = "M"    # Recommended: M or L for faster builds
+
+# Scaling (horizontal)
+min_instance_count = 1
+max_instance_count = 1  # Set > 1 for high availability
+
+# ===========================
+# DATABASE CONFIGURATION
+# ===========================
+postgres_plan = "xs_sml" # Or another postgresql plan
+
+# ===========================
+# OBJECT STORAGE (CELLAR)
+# ===========================
+cellar_bucket_name = "<CELLAR_BUCKET_NAME>"
+
+# ===========================
+# CUSTOM DOMAIN (OPTIONAL)
+# ===========================
+custom_domain = ""  # Example: "strapi.mydomain.com"
+                    # Don't forget to configure DNS with CNAME record
+
+# ===========================
+# FRONTEND CONFIGURATION
+# ===========================
+FRONTEND_URL = ""  # Example: "https://mywebsite.com"
+                   # Leave empty if not using a separate frontend
+
+# ===========================
+# SMTP CONFIGURATION (OPTIONAL)
+# ===========================
+# Required for email notifications, password reset, etc.
+SMTP_FROM     = ""  # Example: "noreply@mydomain.com"
+SMTP_HOST     = ""  # Example: "smtp.gmail.com", "smtp.sendgrid.net", "smtp.mailgun.org"
+SMTP_PORT     = "587"  # 587 (TLS) or 465 (SSL)
+SMTP_USERNAME = ""  # Your SMTP username
+SMTP_PASSWORD = ""  # Your SMTP password
+
+# ===========================
+# SECRETS (DO NOT COMMIT!)
+# ===========================
+# Generate with: openssl rand -hex 32 
+# Or use ./generate-secrets.sh to generate a file with keys 
+admin_jwt_secret     = ""  # Admin JWT secret
+api_token_salt       = ""  # API token salt
+app_keys             = ""  # 4 keys separated by commas (generate 4 times)
+jwt_secret           = ""  # JWT secret
+transfer_token_salt  = ""  # Transfer token salt
+
+# ===========================
+# GIT DEPLOYMENT
+# ===========================
+git_repository_url = "https://github.com/your-username/your-repo.git"
+git_branch         = "main"  # or "master", "develop", etc.
+
+# For private repositories, generate a Personal Access Token
+# https://github.com/settings/tokens (classic token with 'repo' scope)
+# github_token = "ghp_xxxxxxxxxxxxx"
