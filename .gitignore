@@ -106,9 +106,23 @@ coverage
 ############################
 
 .env
+.cache
 license.txt
 exports
 .strapi
 dist
 build
 .strapi-updater.json
+
+############################
+# Terraform
+############################
+
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/*.tfstate.*.backup
+terraform/.terraform.lock.hcl
+terraform/terraform.tfvars
+terraform/secrets.txt
+terraform.tfstate
